@@ -6,7 +6,7 @@ require('@nomiclabs/hardhat-ethers');
 require('hardhat-deploy');
 require('dotenv').config();
 
-/* @div create .env file with PROJECT ID from your project in infura and a private key from your MetaMask account:
+/* Create .env file with PROJECT ID from your project in Infura and a private key from your MetaMask account. Code:
    INFURA_API_KEY='<PROJECT ID>'
    PRIVATE_KEYS='<private key from MetaMask>'
 */
