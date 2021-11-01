@@ -7,17 +7,9 @@ async function deploy() {
    deployerAddress = account.address;
    console.log(`Deploying contracts using ${deployerAddress}`);
 
-   // Deploy TokenA_ERC20
-   const tokenA = await ethers.getContractFactory('TokenA');
-   const tokenAInstance = await tokenA.deploy();
-   await tokenAInstance.deployed();
-   console.log(`TokenA deployed to : ${tokenAInstance.address}`);
-
    // Deploy TokenB_ERC20
-   const tokenB = await ethers.getContractFactory('TokenB');
-   console.log(`TokenB : ${tokenB}`);
-   const tokenBInstance = await tokenB.deploy(deployerAddress);
-   console.log(`tokenBInstance : ${tokenBInstance}`);
+   const TokenB = await ethers.getContractFactory('TokenB');
+   const tokenBInstance = await TokenB.deploy();
    await tokenBInstance.deployed();
    console.log(`TokenB deployed to : ${tokenBInstance.address}`);
 }

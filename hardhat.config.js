@@ -11,7 +11,7 @@ require('dotenv').config();
    PRIVATE_KEYS='<private key from MetaMask>'
 */
 
-const { INFURA_API_KEY, PRIVATE_KEYS, NETWORK_URL, ETHERSCAN_API_KEY } = process.env;
+const { INFURA_API_KEY, PRIVATE_KEYS, NETWORK_URL, PRIVATE_KEYS_EVMOS, ETHERSCAN_API_KEY } = process.env;
 
 module.exports = {
    defaultNetwork: 'hardhat',
@@ -22,12 +22,17 @@ module.exports = {
       ropsten: {
          url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
          accounts: [PRIVATE_KEYS],
-         chainId: 4
+         chainId: 3
       },
       rinkeby: {
          url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
          accounts: [PRIVATE_KEYS],
          chainId: 4
+      },
+      evmos: {
+         url: NETWORK_URL,
+         accounts: [PRIVATE_KEYS_EVMOS],
+         chainId: 9000
       },
    },
    solidity: {
