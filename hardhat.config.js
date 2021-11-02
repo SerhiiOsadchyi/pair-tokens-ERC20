@@ -11,7 +11,9 @@ require('dotenv').config();
    PRIVATE_KEYS='<private key from MetaMask>'
 */
 
-const { INFURA_API_KEY, PRIVATE_KEYS, NETWORK_URL, PRIVATE_KEYS_EVMOS, ETHERSCAN_API_KEY } = process.env;
+const { INFURA_API_KEY, PRIVATE_KEYS, NETWORK_URL, PRIVATE_KEYS_EVMOS, NETWORK_URL_TESTNET, PRIVATE_KEYS_TESTNET, 
+   ETHERSCAN_API_KEY } = process.env;
+const accounts = PRIVATE_KEYS_TESTNET.split(", ");
 
 module.exports = {
    defaultNetwork: 'hardhat',
@@ -32,6 +34,11 @@ module.exports = {
       evmos: {
          url: NETWORK_URL,
          accounts: [PRIVATE_KEYS_EVMOS],
+         chainId: 9000
+      },
+      testnet: {
+         url: NETWORK_URL_TESTNET,
+         accounts: accounts,
          chainId: 9000
       },
    },
