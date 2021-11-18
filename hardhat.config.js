@@ -34,7 +34,7 @@ module.exports = {
       evmos: {
          url: NETWORK_URL,
          accounts: [PRIVATE_KEYS_EVMOS],
-         chainId: 9000
+         chainId: 9090
       },
       testnet: {
          url: NETWORK_URL_TESTNET,
