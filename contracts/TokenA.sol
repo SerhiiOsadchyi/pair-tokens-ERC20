@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "./openzeppelin-v4.3.2/token/ERC20/ERC20.sol";
 import "./openzeppelin-v4.3.2/access/Ownable.sol";
 //import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-//import "@openzeppelin/contracts/access/Ownable.sol";;
+//import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @dev 1000 tokens TokenA address at Ropsten 0xc7bc69329f5f0734c2881aff729dc03c3c2b2ca2
 /// @dev 1e5 tokens TokenA address at Rinkeby 0xa0d9e4ecd7ef0e7330258348db9f6bd69173a24b
