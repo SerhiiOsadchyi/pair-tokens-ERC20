@@ -2,6 +2,10 @@
  * @type import('hardhat/config').HardhatUserConfig
  */
 
+require('dotenv').config({
+   path: process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : '.env'
+})
+
 require('@nomiclabs/hardhat-ethers');
 require('hardhat-deploy');
 require('dotenv').config();
@@ -18,7 +22,6 @@ module.exports = {
    defaultNetwork: DEFAULT_NETWORK || 'hardhat',
    networks: {
       hardhat: {},
-
       ropsten: {
          url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
          accounts: [PRIVATE_KEYS],
