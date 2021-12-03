@@ -15,8 +15,7 @@ const { INFURA_API_KEY, PRIVATE_KEYS, LOCAL_NETWORK_URL, TESTNET_NETWORK_URL, PR
 const accounts = PRIVATE_KEYS_TESTNET.split(", ");
 
 module.exports = {
-   defaultNetwork: 'hardhat',
-
+   defaultNetwork: DEFAULT_NETWORK || 'hardhat',
    networks: {
       hardhat: {},
 
