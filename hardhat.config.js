@@ -11,8 +11,7 @@ require('dotenv').config();
    PRIVATE_KEYS='<private key from MetaMask>'
 */
 
-const { INFURA_API_KEY, PRIVATE_KEYS, NETWORK_URL, PRIVATE_KEYS_EVMOS, NETWORK_URL_TESTNET, PRIVATE_KEYS_TESTNET, 
-   ETHERSCAN_API_KEY } = process.env;
+const { INFURA_API_KEY, PRIVATE_KEYS, LOCAL_NETWORK_URL, TESTNET_NETWORK_URL, PRIVATE_KEYS_TESTNET } = process.env;
 const accounts = PRIVATE_KEYS_TESTNET.split(", ");
 
 module.exports = {
@@ -24,7 +23,7 @@ module.exports = {
       ropsten: {
          url: `https://ropsten.infura.io/v3/${INFURA_API_KEY}`,
          accounts: [PRIVATE_KEYS],
-         chainId: 3
+         chainId: 4
       },
       rinkeby: {
          url: `https://rinkeby.infura.io/v3/${INFURA_API_KEY}`,
@@ -32,12 +31,12 @@ module.exports = {
          chainId: 4
       },
       evmos: {
-         url: NETWORK_URL,
-         accounts: [PRIVATE_KEYS_EVMOS],
+         url: LOCAL_NETWORK_URL,
+         accounts: accounts,
          chainId: 9090
       },
       testnet: {
-         url: NETWORK_URL_TESTNET,
+         url: TESTNET_NETWORK_URL,
          accounts: accounts,
          chainId: 9000
       },
