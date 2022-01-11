@@ -2,6 +2,6 @@
 /artifacts/
 /cache/
 
-/.env
+.env
 .env.my
 .env.empty
