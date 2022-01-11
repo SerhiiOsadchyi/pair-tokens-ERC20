@@ -15,7 +15,8 @@ require('dotenv').config();
    PRIVATE_KEYS='<private key from MetaMask>'
 */
 
-const { INFURA_API_KEY, PRIVATE_KEYS, LOCAL_NETWORK_URL, TESTNET_NETWORK_URL, PRIVATE_KEYS_TESTNET } = process.env;
+const { DEFAULT_NETWORK, INFURA_API_KEY, PRIVATE_KEYS, LOCAL_NETWORK_URL, LOCAL_NETWORK_URL_POLYGON,
+   TESTNET_NETWORK_URL, PRIVATE_KEYS_TESTNET } = process.env;
 const accounts = PRIVATE_KEYS_TESTNET.split(", ");
 
 module.exports = {
@@ -41,6 +42,11 @@ module.exports = {
          url: TESTNET_NETWORK_URL,
          accounts: accounts,
          chainId: 9000
+      },
+      polygon: {
+         url: LOCAL_NETWORK_URL_POLYGON,
+         accounts: [PRIVATE_KEYS],
+         chainId: 100
       },
    },
    solidity: {
