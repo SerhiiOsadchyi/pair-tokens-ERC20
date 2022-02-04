@@ -11,6 +11,9 @@ npx hardhat run --network testnet scripts/deploy-tokenA.js
 npx hardhat run --network testnet scripts/deploy-tokenB.js
 npx hardhat run --network testnet scripts/deploy-tokenB-from-user3.js
 
-npx hardhat run --network polygon scripts/deploy-tokenA.js
-npx hardhat run --network polygon scripts/deploy-tokenB.js
+npx hardhat run --network poligonlocal scripts/deploy-tokenA.js
+npx hardhat run --network poligonlocal scripts/deploy-tokenB.js
+
+npx hardhat run --network poligontestnet scripts/deploy-tokenA.js
+npx hardhat run --network poligontestnet scripts/deploy-tokenB.js
 
